@@ -1,6 +1,7 @@
 (source melpa)
 (source marmalade)
 
+(depends-on "4clojure")
 (depends-on "ag")
 (depends-on "auto-complete")
 (depends-on "cask")
