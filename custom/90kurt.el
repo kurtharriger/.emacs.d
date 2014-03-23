@@ -34,3 +34,8 @@
 
 (setq auto-save-default nil)
 (setq backup-inhibited t)
+
+(define-globalized-minor-mode global-undo-tree-mode
+    undo-tree-mode undo-tree-mode)
+
+(global-undo-tree-mode 1)
