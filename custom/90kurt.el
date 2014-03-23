@@ -31,3 +31,6 @@
 (when (not (string= "" (shell-command-to-string "/usr/bin/which pbpaste")))
     (setq interprogram-cut-function 'copy-to-osx)
       (setq interprogram-paste-function 'paste-from-osx))
+
+(setq auto-save-default nil)
+(setq backup-inhibited t)
