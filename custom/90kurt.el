@@ -39,3 +39,15 @@
     undo-tree-mode undo-tree-mode)
 
 (global-undo-tree-mode 1)
+(delete-selection-mode 1)
+
+(defun save-all ()
+    (interactive)
+      (save-some-buffers t))
+
+(setq buffer-save-without-query t)
+(add-hook 'focus-out-hook 'save-all)
+
+;; those anoying .#file symlinks are lock files
+;; this disables them
+(setq create-lockfiles nil)
