@@ -1,4 +1,19 @@
 (ns user)
+
+(System/setOut (java.io.PrintStream. (org.apache.commons.io.output.WriterOutputStream. *out*)))
+
+(def capture-logging!
+  (memoize
+   (fn [] (try
+            (Class/forName "org.apache.log4j.Logger")
+            (eval `(-> (org.apache.log4j.Logger/getRootLogger)
+                       (.addAppender (org.apache.log4j.WriterAppender.
+                                      (org.apache.log4j.SimpleLayout.)
+                                      *out*))))
+
+            (catch Exception e nil)))))
+
+
 (require '[clojure.java.io :as io])
 (require 'spyscope.core)
 (require 'vinyasa.inject)
