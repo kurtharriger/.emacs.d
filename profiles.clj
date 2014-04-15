@@ -1,7 +1,8 @@
 {:user
  {:injections [(load-file (.getAbsolutePath (clojure.java.io/file (System/getenv "HOME") ".lein/inject.clj")))]
-  :dependencies [[commons-io/commons-io "2.4"]
-                 [spyscope "0.1.4"]
+  :dependencies [;;[commons-io/commons-io "2.4"]
+                 ;;[clj-time "0.6.0"]
+                 ;;[spyscope "0.1.4"]
                  [org.clojure/tools.namespace "0.2.4"]
                  [io.aviso/pretty "0.1.10"]
                  [im.chit/vinyasa "0.1.8"]

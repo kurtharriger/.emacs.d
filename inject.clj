@@ -1,6 +1,6 @@
 (ns user)
 
-(System/setOut (java.io.PrintStream. (org.apache.commons.io.output.WriterOutputStream. *out*)))
+;;(System/setOut (java.io.PrintStream. (org.apache.commons.io.output.WriterOutputStream. *out*)))
 
 (def capture-logging!
   (memoize
@@ -15,7 +15,6 @@
 
 
 (require '[clojure.java.io :as io])
-(require 'spyscope.core)
 (require 'vinyasa.inject)
 
 
